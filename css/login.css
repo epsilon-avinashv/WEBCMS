@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin: 0;
+	padding: 0;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	background-image:url("../images/apple-desk.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	overflow:hidden;
+	
+}
+#login-form{
+	display: block;
+}
+#registration-form{
+	display: none;
+}
+.box{
+	padding: 50px;
+	height: 100%;
+	width: 25%;
+	color: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 75%;
+	background-color: rgba(0,0,0,0.69);
+	
+	
+	border-left: 5px solid #ffffff;
+	 animation: wipein 2s forwards 0s ease;
+}
+.box h1{
+	font-weight: bold;
+	padding-top: 30%;
+	
+}
+.box h6{
+	padding-bottom: 5%;
+}
+@keyframes wipein{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+        }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        }
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(xx);
+        opacity: 1;
+        }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
