@@ -1,4 +1,5 @@
 // JavaScript Document
+
 function flipform()
 {
 	var x=document.getElementById("login-form");
@@ -28,8 +29,12 @@ function login()
 	xhttp.onload= function()
 	{
 		var data=JSON.parse(xhttp.responseText);
-		var a = data.filter((obj) => {if(obj.name===usn && obj.password===pass) return true});
-		console.log(a);
+        var a = data.filter((obj) => {
+            if (obj.name === usn && obj.password === pass) {
+                return true;
+            }
+            
+        });
 //		for(var i=0; i<data.length;i++)
 //			{
 //				if(data[i].name === usn && data[i].password===pass)
@@ -47,21 +52,16 @@ function login()
 //				
 //			}
 		
-		if(a.length>0)
-		{
-			alert("Login Sucessfull");
-			document.getElementById("username").value="";
-			document.getElementById("password").value="";
+		if(a.length > 0)
+        {
+            window.location = "dashboard.html";
+            document.cookie = document.getElementById("username").value;            
 		}
-	else{
-		alert("login failed");
-		document.getElementById("username").value="";
-		document.getElementById("password").value="";
+	    else{
+		    alert("login failed");
+		    document.getElementById("username").value="";
+		    document.getElementById("password").value="";
+	    }		
 	}
-		
-	}
-	
-	
-	
 	xhttp.send();
 }
