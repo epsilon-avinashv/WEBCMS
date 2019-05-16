@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard - BNY Mellon</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</head>
+<body>
+    <div class="d-flex dashboard-bg">
+        <!--<div class="col-xl-4 dashboard">Dashboard</div>
+        <div class="col-xl-8 profile fa fa-user">
+            <span class="user">Username</span>
+        </div>-->
+        <div class="dashboard">Dashboard</div>
+        <div class="flex-grow-1">
+            <div class="dropdown fas fa fa-user">
+                <a href="#" class="dropbtn" id="uname">USERNAME</a>
+                <div class="dropdown-content">
+                    <a href="#">View Profile</a>
+                    <a href="#">Change Password</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <nav class="nav-bg">
+            <div class="site">BNY Mellon</div>
+            <div id="accordion">
+                <div class="">
+                    <div class="site-nav">
+                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                            Site Navigation
+                            <i class="fas fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse">
+                        <div class="nav-list">
+                            <ul>
+                                <li>
+                                    <a href="#">Who we are</a>
+                                </li>
+                                <li>
+                                    <a href="#">What we do</a>
+                                </li>
+                                <li>
+                                    <a href="#">Who we serve</a>
+                                </li>
+                                <li>
+                                    <a href="#">Our thinking</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="site-nav">
+                        <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                            Site Content
+                            <i class="fas fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse">
+                        <div class="nav-list">
+                            <ul>
+                                <li>
+                                    <a href="#" onclick="setVisibility('banner', 'block')" ;>Banners</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cards/Blocks</a>
+                                </li>
+                                <li>
+                                    <a href="#">Footer</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <div class="flex-grow-1 white-bg ">
+            <div class="border" id="banner">
+                <div class="d-flex white-bg">
+                    <span class="headers">Banners</span>
+                    <div class="flex-grow-1 align-right">
+                        <form action="/action_page.php" class="">
+                            <input type="text" placeholder="&#xf3ee; Contains text..." class="fab">
+                        </form>
+                    </div>
+                </div>
+                <div class="content">
+                    <table class="table table-striped table-wrapper-scroll-y my-custom-scrollbar" id="banner_table">
+                        <tr>
+                            <td><i class="fas fa-square"></i></td>
+                            <td>Banner Name</td>
+                            <td>Banner ID</td>
+                            <td>Status</td>
+                            <td>Action</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>     
+</html>
